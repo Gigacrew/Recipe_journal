@@ -1,6 +1,7 @@
 
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import type { PropsWithChildren } from 'react';
+import { initializeApp } from "firebase/app";
 import {
   SafeAreaView,
   ScrollView,
@@ -12,7 +13,7 @@ import {
   View,
   TouchableOpacity
 } from 'react-native';
-
+import auth from '@react-native-firebase/auth';
 import {
   Colors
 } from 'react-native/Libraries/NewAppScreen';
@@ -21,39 +22,50 @@ type SectionProps = PropsWithChildren<{
   title: string;
 }>;
 
-function Section({ children, title }: SectionProps): JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-}
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
+  const [email, onChangeEmail] = useState('');
+  const [password, onChangePassword] = useState('');
+  const [initializing, setInitializing] = useState(true);
+  const [user, setUser] = useState();
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
+  function onLogin() {
+  auth()
+  .createUserWithEmailAndPassword(email, password)
+  .then(() => {
+    console.log('User account created & signed in!');
+  })
+  .catch(error => {
+    if (error.code === 'auth/email-already-in-use') {
+      console.log('That email address is already in use!');
+    }
+
+    if (error.code === 'auth/invalid-email') {
+      console.log('That email address is invalid!');
+    }
+
+    console.error('error is',error);
+  });
+
+  }
+
+  function onAuthStateChanged() {
+    setUser(user);
+    if (initializing) setInitializing(false);
+  }
+
+  useEffect(() => {
+
+    const subscriber = auth().onAuthStateChanged(onAuthStateChanged);
+    return subscriber;
+  }, []);
+
+  // if (initializing) return <View />;
   return (
     <SafeAreaView>
       <StatusBar
@@ -81,14 +93,12 @@ function App(): JSX.Element {
             <Text style={{textAlign: 'center', fontSize: 16, color:"#4C331A"}}>A login away from secret recipes🤤 </Text>
             <TextInput
               style={styles.input}
-            // onChangeText={onChangeText}
-            // value={text}
+            onChangeText={onChangeEmail}
             placeholder="me@example.com"
             />
             <TextInput
               style={styles.input}
-              // onChangeText={onChangeNumber}
-              // value={number}
+              onChangeText={onChangePassword}
               placeholder="your password"
               keyboardType="numeric"
             />
@@ -97,17 +107,13 @@ function App(): JSX.Element {
           <View style={styles.bottomBox}>
         <TouchableOpacity
           style={[styles.buttonStyle,{backgroundColor: "#253C78"}]}
-          onPress={() => {
-            // doLogin();
-          }}>
+          onPress={onLogin}>
           <Text style={styles.buttonFont}>Login</Text>
         </TouchableOpacity>
         <View style={{flexDirection: 'row', alignSelf: 'center', marginTop: 12}}>
           <Text style={{color:"#4C331A"}}>New here? </Text>
           <TouchableOpacity
-          onPress={() => {
-            // navigation.goBack();
-          }}>
+          >
           <Text style={{color:"#253C78"}}>Sign up</Text>
         </TouchableOpacity>
         </View>
