@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyDzZNX4K9mPazqj1R2EYUGVL1RX5V07cY4</string>
+	<string>AIzaSyAz3iVhEQ-czqrVnbS67X5Y8ix682PeNI0</string>
 	<key>GCM_SENDER_ID</key>
-	<string>113869932814</string>
+	<string>484617368483</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>org.reactjs.native.example.RecipeJournal</string>
 	<key>PROJECT_ID</key>
-	<string>recipejournal-5cf17</string>
+	<string>recipejournal-d7bc0</string>
 	<key>STORAGE_BUCKET</key>
-	<string>recipejournal-5cf17.appspot.com</string>
+	<string>recipejournal-d7bc0.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:113869932814:ios:b57a99c61928bf581a2f5f</string>
+	<string>1:484617368483:ios:c0325dd3b97a1374f22016</string>
 </dict>
 </plist>
