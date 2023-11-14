@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "484617368483",
+    "project_id": "recipejournal-d7bc0",
+    "storage_bucket": "recipejournal-d7bc0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:484617368483:android:c22e8aee718bdfc0f22016",
+        "android_client_info": {
+          "package_name": "com.recipejournal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDU2Y_uT9PMyQmHRoY4kIbeLXfW1HnZn8A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
