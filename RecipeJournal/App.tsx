@@ -1,9 +1,9 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable quotes */
 /* eslint-disable react-native/no-inline-styles */
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 import NavigationBar from "./utils/components/NavigationBar";
-import { RootStackParamList } from "./utils/types/NavigationTypes";
+import {RootStackParamList} from "./utils/types/NavigationTypes";
 import RecipeList from "./screens/RecipeListView";
 import RecipeDetail from "./screens/RecipeDetail";
 import HomeScreen from "./screens/HomeScreen";
@@ -12,21 +12,18 @@ import MealPlanDetailsScreen from "./screens/MealPlanDetails";
 import ShoppingList from "./screens/ShoppingList";
 import SignUpScreen from "./screens/SignUpScreen";
 
-import firebase from "@react-native-firebase/app";
 import {
   SafeAreaView,
-  ScrollView,
   StatusBar,
   StyleSheet,
   Text,
-  TextInput,
   useColorScheme,
-  View,
   TouchableOpacity,
 } from "react-native";
 import auth from "@react-native-firebase/auth";
-import { Colors } from "react-native/Libraries/NewAppScreen";
-import { NavigationContainer, useNavigation } from "@react-navigation/native";
+import firebase from "@react-native-firebase/app";
+import {Colors} from "react-native/Libraries/NewAppScreen";
+import {NavigationContainer} from "@react-navigation/native";
 import {
   BottomTabBarProps,
   createBottomTabNavigator,
@@ -46,9 +43,9 @@ const firebaseConfig = {
 
   appId: "1:484617368483:web:a9d09ddcbea91289f22016",
 };
-
-firebase.initializeApp(firebaseConfig);
-
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
+}
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === "dark";
   const [initializing, setInitializing] = useState(true);
@@ -70,7 +67,7 @@ function App(): JSX.Element {
     return subscriber;
   });
   const Stack = createBottomTabNavigator<RootStackParamList>();
-  const CustomTabBar: React.FC<BottomTabBarProps> = (props) => {
+  const CustomTabBar: React.FC<BottomTabBarProps> = props => {
     return <NavigationBar {...props} />;
   };
   // if (initializing) return <View />;
@@ -89,16 +86,15 @@ function App(): JSX.Element {
         <>
           <Stack.Navigator
             initialRouteName="Home"
-            tabBar={(props) => <CustomTabBar {...props} />}
-            screenOptions={({ route }) => ({
+            tabBar={props => <CustomTabBar {...props} />}
+            screenOptions={({route}) => ({
               tabBarActiveTintColor: "tomato",
               tabBarInactiveTintColor: "gray",
-            })}
-          >
+            })}>
             <Stack.Screen
               name="Home"
               component={HomeScreen}
-              initialParams={{ title: "Welcome to Your Recipe Journal" }}
+              initialParams={{title: "Welcome to Your Recipe Journal"}}
             />
             <Stack.Screen
               name="MealPlanDetails"
@@ -107,7 +103,7 @@ function App(): JSX.Element {
             <Stack.Screen
               name="RecipeList"
               component={RecipeList}
-              options={({ navigation }) => ({ navigation })}
+              options={({navigation}) => ({navigation})}
             />
             <Stack.Screen name="Recipe" component={RecipeDetail} />
             <Stack.Screen name="AddNewRecipe" component={AddNewRecipe} />
