@@ -6,20 +6,13 @@ import {
   StyleSheet,
   TouchableHighlight,
 } from "react-native";
-import { AddRecipeScreenProps } from "../utils/types/NavigationTypes";
+import {AddRecipeScreenProps} from "../utils/types/NavigationTypes";
 
-const AddNewRecipe: React.FC<AddRecipeScreenProps> = ({
-  navigation,
-  route,
-}) => {
+const AddNewRecipe: React.FC<AddRecipeScreenProps> = ({navigation, route}) => {
   return (
     <View style={styles.mainContainer}>
-      <Text
-        style={styles.recipeHeader}
-      >
-        Add New Recipe
-      </Text>
-      <View style={{ margin: 20 }}>
+      <Text style={styles.recipeHeader}>Add New Recipe</Text>
+      <View style={{margin: 20}}>
         <Text>Recipe Name</Text>
         <TextInput
           style={styles.input}
@@ -28,7 +21,7 @@ const AddNewRecipe: React.FC<AddRecipeScreenProps> = ({
           keyboardType="numeric"
         />
         <TextInput />
-        <View style={{ flexDirection: "row" }}>
+        <View style={{flexDirection: "row"}}>
           <View>
             <Text>Recipe Servings</Text>
             <TextInput
@@ -40,7 +33,7 @@ const AddNewRecipe: React.FC<AddRecipeScreenProps> = ({
             <TextInput />
           </View>
 
-          <View style={{ marginLeft: 40 }}>
+          <View style={{marginLeft: 40}}>
             <Text>Cooking Time</Text>
             <TextInput
               style={styles.input}
@@ -68,18 +61,12 @@ const AddNewRecipe: React.FC<AddRecipeScreenProps> = ({
         />
         <TextInput />
 
-        <View
-          style={styles.buttonContainer}
-        >
-          <TouchableHighlight
-            style={styles.cancelButton}
-          >
+        <View style={styles.buttonContainer}>
+          <TouchableHighlight style={styles.cancelButton}>
             <Text>Cancel</Text>
           </TouchableHighlight>
-          <TouchableHighlight
-            style={styles.addRecipeButton}
-          >
-            <Text style={{ color: "white" }}>Add Recipe</Text>
+          <TouchableHighlight style={styles.addRecipeButton}>
+            <Text style={{color: "white"}}>Add Recipe</Text>
           </TouchableHighlight>
         </View>
       </View>
@@ -88,9 +75,9 @@ const AddNewRecipe: React.FC<AddRecipeScreenProps> = ({
 };
 
 const styles = StyleSheet.create({
-  mainContainer: { 
-    flex: 1, 
-    backgroundColor: "white" 
+  mainContainer: {
+    flex: 1,
+    backgroundColor: "white",
   },
   input: {
     height: 40,
@@ -108,7 +95,7 @@ const styles = StyleSheet.create({
     borderColor: "lightgray",
     borderRadius: 4,
   },
-  addRecipeButton : {
+  addRecipeButton: {
     backgroundColor: "#873e23",
     height: 40,
     width: 120,
@@ -116,7 +103,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderRadius: 8,
   },
-  cancelButton : {
+  cancelButton: {
     borderWidth: 4,
     borderColor: "#873e23",
     height: 40,
@@ -130,12 +117,12 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     margin: 20,
   },
-  recipeHeader : {
+  recipeHeader: {
     textAlign: "center",
     fontSize: 32,
     fontWeight: "bold",
     marginTop: 18,
-  }
+  },
 });
 
 export default AddNewRecipe;

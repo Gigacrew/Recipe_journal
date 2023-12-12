@@ -1,20 +1,18 @@
 import React from "react";
-import { Text, View, TouchableOpacity, StyleSheet } from "react-native";
-import { HomeScreenProps } from "../utils/types/NavigationTypes";
+import {Text, View, TouchableOpacity, StyleSheet} from "react-native";
+import {HomeScreenProps} from "../utils/types/NavigationTypes";
 
-const HomeScreen: React.FC<HomeScreenProps> = ({ navigation, route }) => {
+const HomeScreen: React.FC<HomeScreenProps> = ({navigation, route}) => {
   return (
     <View style={styles.container}>
       <TouchableOpacity
         style={styles.addButton}
-        onPress={() => navigation.navigate("ShoppingList")}
-      >
+        onPress={() => navigation.navigate("ShoppingList")}>
         <Text style={styles.addButtonText}>Head to Shopping List</Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.addButton}
-        onPress={() => navigation.navigate("MealPlanDetails")}
-      >
+        onPress={() => navigation.navigate("MealPlanDetails")}>
         <Text style={styles.addButtonText}>Head to Meal Plan</Text>
       </TouchableOpacity>
     </View>

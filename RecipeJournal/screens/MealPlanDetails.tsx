@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import {
   View,
   Text,
@@ -7,7 +7,7 @@ import {
   StyleSheet,
   TouchableOpacity,
 } from "react-native";
-import { MealPlanDetailsScreenProps } from "../utils/types/NavigationTypes";
+import {MealPlanDetailsScreenProps} from "../utils/types/NavigationTypes";
 import Checkbox from "../utils/components/Checkbox";
 import Icon from "react-native-vector-icons/Ionicons";
 
@@ -27,7 +27,7 @@ const MealPlanDetailsScreen: React.FC<MealPlanDetailsScreenProps> = ({
   });
 
   const toggleSwitch = (key: string) => {
-    setSwitchStates((prevState) => ({
+    setSwitchStates(prevState => ({
       ...prevState,
       [key]: !prevState[key],
     }));
@@ -37,25 +37,25 @@ const MealPlanDetailsScreen: React.FC<MealPlanDetailsScreenProps> = ({
   }>({});
 
   const toggleCheckbox = (key: string): void => {
-    setCheckboxStates((prevState: { [key: string]: boolean }) => ({
+    setCheckboxStates((prevState: {[key: string]: boolean}) => ({
       ...prevState,
       [key]: !prevState[key],
     }));
   };
 
   const switches = [
-    { label: "Lactose Intolerance", key: "LactoseIntolerance" },
-    { label: "Vegetarian", key: "Vegetarian" },
-    { label: "Gluten Intolerance", key: "GlutenIntolerance" },
-    { label: "Peanut Allergy", key: "PeanutAllergy" },
-    { label: "Vegan", key: "Vegan" },
-    { label: "Celiac", key: "Celiac" },
+    {label: "Lactose Intolerance", key: "LactoseIntolerance"},
+    {label: "Vegetarian", key: "Vegetarian"},
+    {label: "Gluten Intolerance", key: "GlutenIntolerance"},
+    {label: "Peanut Allergy", key: "PeanutAllergy"},
+    {label: "Vegan", key: "Vegan"},
+    {label: "Celiac", key: "Celiac"},
   ];
   const checkboxes = [
-    { label: "Breakfast", key: "Breakfast" },
-    { label: "Lunch", key: "Lunch" },
-    { label: "Dinner", key: "Dinner" },
-    { label: "Snack", key: "Snack" },
+    {label: "Breakfast", key: "Breakfast"},
+    {label: "Lunch", key: "Lunch"},
+    {label: "Dinner", key: "Dinner"},
+    {label: "Snack", key: "Snack"},
   ];
 
   return (
@@ -63,7 +63,7 @@ const MealPlanDetailsScreen: React.FC<MealPlanDetailsScreenProps> = ({
       <Text style={styles.h2}>Create a New Meal Plan</Text>
       <TextInput placeholder="Amount of Days" style={styles.input} />
       <View style={styles.inputGroup}>
-        {checkboxes.map(({ label, key }) => (
+        {checkboxes.map(({label, key}) => (
           <Checkbox
             label={label}
             checked={!!checkboxStates[key]}
@@ -73,11 +73,11 @@ const MealPlanDetailsScreen: React.FC<MealPlanDetailsScreenProps> = ({
         ))}
       </View>
       <View style={styles.inputGroup}>
-        {switches.map(({ label, key }) => (
+        {switches.map(({label, key}) => (
           <View style={styles.switchElement} key={key}>
             <Text> {label} </Text>
             <Switch
-              trackColor={{ false: "#767577", true: "#7A2626" }}
+              trackColor={{false: "#767577", true: "#7A2626"}}
               thumbColor={switchStates[key] ? "#fff" : "#fff"}
               ios_backgroundColor="#3e3e3e"
               onValueChange={() => toggleSwitch(key)}
