@@ -38,12 +38,12 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RecipeJournal/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RecipeJournal/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-RecipeJournal-RecipeJournalTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RecipeJournal-RecipeJournalTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B4392A12AC88292D35C810B /* Pods-RecipeJournal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeJournal.debug.xcconfig"; path = "Target Support Files/Pods-RecipeJournal/Pods-RecipeJournal.debug.xcconfig"; sourceTree = "<group>"; };
-		5709B34CF0A7D63546082F79 /* Pods-RecipeJournal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeJournal.release.xcconfig"; path = "Target Support Files/Pods-RecipeJournal/Pods-RecipeJournal.release.xcconfig"; sourceTree = "<group>"; };
-		5B7EB9410499542E8C5724F5 /* Pods-RecipeJournal-RecipeJournalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeJournal-RecipeJournalTests.debug.xcconfig"; path = "Target Support Files/Pods-RecipeJournal-RecipeJournalTests/Pods-RecipeJournal-RecipeJournalTests.debug.xcconfig"; sourceTree = "<group>"; };
+		253A00B38242CDC524BF74C3 /* Pods-RecipeJournal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeJournal.debug.xcconfig"; path = "Target Support Files/Pods-RecipeJournal/Pods-RecipeJournal.debug.xcconfig"; sourceTree = "<group>"; };
+		351378EC96B5ABD9763F72B4 /* Pods-RecipeJournal-RecipeJournalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeJournal-RecipeJournalTests.debug.xcconfig"; path = "Target Support Files/Pods-RecipeJournal-RecipeJournalTests/Pods-RecipeJournal-RecipeJournalTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-RecipeJournal.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RecipeJournal.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = RecipeJournal/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		89C6BE57DB24E9ADA2F236DE /* Pods-RecipeJournal-RecipeJournalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeJournal-RecipeJournalTests.release.xcconfig"; path = "Target Support Files/Pods-RecipeJournal-RecipeJournalTests/Pods-RecipeJournal-RecipeJournalTests.release.xcconfig"; sourceTree = "<group>"; };
+		B01F04836CBB3B008F5B18AE /* Pods-RecipeJournal-RecipeJournalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeJournal-RecipeJournalTests.release.xcconfig"; path = "Target Support Files/Pods-RecipeJournal-RecipeJournalTests/Pods-RecipeJournal-RecipeJournalTests.release.xcconfig"; sourceTree = "<group>"; };
+		E0301644506A318705C6C5C9 /* Pods-RecipeJournal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeJournal.release.xcconfig"; path = "Target Support Files/Pods-RecipeJournal/Pods-RecipeJournal.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F9CAF78B2B01AB33006D6D91 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +108,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		747EA0F256198F456B62D1AD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				253A00B38242CDC524BF74C3 /* Pods-RecipeJournal.debug.xcconfig */,
+				E0301644506A318705C6C5C9 /* Pods-RecipeJournal.release.xcconfig */,
+				351378EC96B5ABD9763F72B4 /* Pods-RecipeJournal-RecipeJournalTests.debug.xcconfig */,
+				B01F04836CBB3B008F5B18AE /* Pods-RecipeJournal-RecipeJournalTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,7 +136,7 @@
 				00E356EF1AD99517003FC87E /* RecipeJournalTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				747EA0F256198F456B62D1AD /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -138,17 +150,6 @@
 				00E356EE1AD99517003FC87E /* RecipeJournalTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3B4392A12AC88292D35C810B /* Pods-RecipeJournal.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-RecipeJournal.release.xcconfig */,
-				5B7EB9410499542E8C5724F5 /* Pods-RecipeJournal-RecipeJournalTests.debug.xcconfig */,
-				89C6BE57DB24E9ADA2F236DE /* Pods-RecipeJournal-RecipeJournalTests.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,7 +203,8 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1210;
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
@@ -412,7 +414,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-RecipeJournal-RecipeJournalTests.debug.xcconfig */;
+			baseConfigurationReference = 351378EC96B5ABD9763F72B4 /* Pods-RecipeJournal-RecipeJournalTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -439,7 +441,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-RecipeJournal-RecipeJournalTests.release.xcconfig */;
+			baseConfigurationReference = B01F04836CBB3B008F5B18AE /* Pods-RecipeJournal-RecipeJournalTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -463,7 +465,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-RecipeJournal.debug.xcconfig */;
+			baseConfigurationReference = 253A00B38242CDC524BF74C3 /* Pods-RecipeJournal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -490,7 +492,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-RecipeJournal.release.xcconfig */;
+			baseConfigurationReference = E0301644506A318705C6C5C9 /* Pods-RecipeJournal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -546,6 +548,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -625,6 +628,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
